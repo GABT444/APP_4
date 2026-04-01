@@ -1,6 +1,6 @@
 package src.electronique;
 
-abstract class Composant {
+public abstract class Composant {
     public Composant(){
 
     }
