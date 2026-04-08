@@ -13,13 +13,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CircuitBuilder {
-
+    private static final char fSep = File.separatorChar;
+    private static final String pathIn = System.getProperty("user.dir") + fSep + "src" + fSep + "donnees";
     public  Composant construireCircuit(String node) {
         List<Composant> Circuits = new ArrayList<>();
         ObjectMapper mapper = new ObjectMapper();
 
         try {
-            JsonNode donneescircuits = mapper.readTree(new File(node));
+
+            JsonNode donneescircuits = mapper.readTree(new File(pathIn+fSep+node));
             JsonNode e = donneescircuits.get("circuit");
             Composant composant = lireCircuitBuilder(e);
             return composant;
