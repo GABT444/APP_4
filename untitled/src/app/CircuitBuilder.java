@@ -14,7 +14,7 @@ import java.util.List;
 
 public class CircuitBuilder {
 
-    public Composant construireCircuit(String node) {
+    public  Composant construireCircuit(String node) {
         List<Composant> Circuits = new ArrayList<>();
         ObjectMapper mapper = new ObjectMapper();
 

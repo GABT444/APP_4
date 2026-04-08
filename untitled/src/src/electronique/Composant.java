@@ -4,5 +4,5 @@ public abstract class Composant {
     public Composant(){
 
     }
-    abstract double calculerResistance();
+    public abstract double calculerResistance();
 }
