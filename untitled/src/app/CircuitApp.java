@@ -7,6 +7,8 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class CircuitApp {
+    private static final char fSep = File.separatorChar;
+    private static final String pathIn = System.getProperty("user.dir")+ fSep +"src"+ fSep +"donnees";
     public CircuitApp() {
 
     }
@@ -23,9 +25,12 @@ public class CircuitApp {
     }
 
     private static File[] ouverturefichiers() {
-        String directoryPath = "u:\\Users\\APP4-gr1\\app 4\\APP_4\\untitled";
+        String directoryPath = pathIn;
         File drectory = new File(directoryPath);
         File[] files = drectory.listFiles();
+        for (File file: files){
+            System.out.println(file.getClass());
+        }
         return files;
     }
 
@@ -35,7 +40,7 @@ public class CircuitApp {
         Scanner sc = new Scanner(System.in);
         while (reponse_int == -1 || !reponse_String.equals("n")) {
             System.out.println("Bienvenue, ce programme est a l'utilité de calculer la resistance dans les circuits suivant:");
-            for (int i = 0; i < files.length; i++) {
+            for (int i = 0; i > files.length; i++) {
                 System.out.println("-" + i + "." + files[i].getName());
                 try {
                     reponse_int = Integer.parseInt(sc.nextLine());
