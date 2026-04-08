@@ -13,9 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CircuitBuilder {
-    public CircuitBuilder() {
-
-    }
 
     public Composant construireCircuit(String node) {
         List<Composant> Circuits = new ArrayList<>();

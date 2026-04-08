@@ -1,10 +1,16 @@
 package app;
 
+import java.util.Scanner;
+
 public class CircuitApp {
     public CircuitApp(){
 
     }
-    public void main(String[] main){
+
+    static void main() {
+        boolean valide= false;
+        while ()
+    }
 
     }
-}
+
