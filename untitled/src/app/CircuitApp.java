@@ -12,8 +12,14 @@ public class CircuitApp {
     }
 
     static void main(String[] args) {
+        fairelestests();
+    }
+
+    static void fairelestests() {
         File[] files = ouverturefichiers();
         double resistance = calculerficher(files);
+        System.out.println("la resistance de se circuits est de est de :"+resistance+"Ω");
+        quitterprogramme_1();
     }
 
     private static File[] ouverturefichiers() {
@@ -47,8 +53,51 @@ public class CircuitApp {
             Composant composants = c.construireCircuit(e);
             double resistance = composants.calculerResistance();
             return resistance;
+        } else if (reponse_String.equals("n")) {
+            quitterprogramme_1();
         }
-
+        throw new RuntimeException("aucune des ligne et verification ne peut de mené içi??? comment????");
     }
+
+    private static void quitterprogramme_1() {
+        String reponse_quitter_1 = "";
+        Scanner sc_quitter_1 = new Scanner(System.in);
+        while (reponse_quitter_1.equals("r") && reponse_quitter_1.equals("q")) {
+            System.out.println("voulez vous vraiment quitter se magnifique programme? \n quitter le programme(q) \n recommencer les tests(r)");
+            reponse_quitter_1 = sc_quitter_1.nextLine();
+            try {
+                reponse_quitter_1.toLowerCase();
+            } catch (Exception e) {
+                System.out.println("ne pas rentré de nombre s'il vout plaît");
+            }
+        }
+        if (reponse_quitter_1.equals("r")) {
+            fairelestests();
+        }
+        if (reponse_quitter_1.equals("q")) {
+
+        }
+    }
+
+    private static void quitterprogramme_2() {
+        String reponse_quitter_2 = "";
+        Scanner sc_quitter_2 = new Scanner(System.in);
+        while (reponse_quitter_2.equals("r") && reponse_quitter_2.equals("q")) {
+            System.out.println("VRAIMENT... :(\n quitter le programme (GROS MÉCHANT) (q) \n recommencer les tests (YOUPI) (r)");
+            reponse_quitter_2 = sc_quitter_2.nextLine();
+            try {
+                reponse_quitter_2.toLowerCase();
+            } catch (Exception e) {
+                System.out.println("ne pas rentré de nombre s'il vout plaît");
+            }
+        }
+        if (reponse_quitter_2.equals("r")) {
+            fairelestests();
+        }
+        if (reponse_quitter_2.equals("q")) {
+            System.exit(0);
+        }
+    }
+}
 
 

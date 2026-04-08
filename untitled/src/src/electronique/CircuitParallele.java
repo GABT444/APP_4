@@ -20,7 +20,7 @@ public class CircuitParallele extends Circuit {
 
     private void valider(Composant c) {
         if (c.calculerResistance()==0){
-            throw new IllegalArgumentException("il ne peut être 0 pour sa resistance"):
+            throw new IllegalArgumentException("il ne peut être 0 pour sa resistance");
         }
     }
 }
